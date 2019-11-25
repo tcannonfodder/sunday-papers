@@ -1,0 +1,7 @@
+/* This is where you can style your site! */
+
+.site-navigation li,
+.comic-navigation li{
+  list-style: none;
+  display: inline-block;
+}

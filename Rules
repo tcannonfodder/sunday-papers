@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+preprocess do
+  # sorted_articles is sorted from most to least recent
+  @config[:first_comic] = sorted_articles.last
+  @config[:last_comic] = sorted_articles.first
+
+  next_comic = nil
+  previous_comic = nil
+
+  sorted_articles.each_with_index do |item, index|
+    if index > 0
+      item[:next_comic] = sorted_articles[index - 1]
+    end
+
+    if sorted_articles[index + 1]
+      item[:previous_comic] = sorted_articles[index + 1]
+    end
+  end
+end
+
+compile '/**/*.html' do
+  filter :erb
+  layout '/default.*'
+
+  write item.identifier.without_ext + '/index.html'
+  # If this is the latest comic, make it the homepage
+  if item == @config[:last_comic]
+    write '/index.html'
+  end
+end
+
+compile '/**/*' do
+  write item.identifier.to_s
+end
+
+layout '/**/*', :erb

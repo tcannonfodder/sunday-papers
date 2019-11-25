@@ -1,0 +1,10 @@
+---
+title: Archive
+non_comic_page: true
+---
+
+<ol reversed>
+<% sorted_articles.each do |item| %>
+  <li><a href="<%= item.identifier.without_ext %>"><%= item[:title] %></a></li>
+<% end %>
+</ol>

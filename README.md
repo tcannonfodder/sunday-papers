@@ -50,7 +50,7 @@ These are the main files & folders to worry about when building your site:
 * **`content/archive.html`**: This is a basic archive page
 * **`content/stylesheet.css`**: This is the CSS file you can use to style your site
 * **`layouts/default.html`**: This is where you define the template used for your site
-* **`output/`**: This is where your exported site will be. Once your site is exported, you can copy and paste everything in this folder to your server!
+* **`output/`**: This is where your exported site will be. Once your site is exported, you can copy and paste everything in this folder to your hosting!
 
 
 ### How to build your site

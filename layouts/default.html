@@ -9,62 +9,64 @@
     <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
   </head>
   <body>
-    <header>
-      <a href="/"><h1>Sunday Papers</h1></a>
-      <nav class='site-navigation'>
-        <ul>
-          <li><a href="/">Latest</a></li>
-          <li><a href="/archive">Archive</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <% if item[:non_comic_page] %>
-        <%= yield %>
-      <% else %>
-        <figure>
-          <%= content_for(@item, :comic) %>
-          <%= yield %>
-        </figure>
-
-
-        <nav class='comic-navigation'>
-          <ol>
-            <li>
-              <a <% if @config[:first_comic] %> href="<%= @config[:first_comic].identifier.without_ext %>" <% end %>>
-                First
-              </a>
-            </li>
-            <li>
-              <a <% if @item[:previous_comic] %> href="<%= @item[:previous_comic].identifier.without_ext %>" <% end %>>
-                Previous
-              </a>
-            </li>
-            <li>
-              <a <% if @item[:next_comic] %> href="<%= @item[:next_comic].identifier.without_ext %>" <% end %>>
-                Next
-              </a>
-            </li>
-            <li>
-              <a <% if @config[:last_comic] %> href="<%= @config[:last_comic].identifier.without_ext %>" <% end %>>
-                Last
-              </a>
-            </li>
-          </ol>
+    <section>
+      <header>
+        <a href="/"><h1>📰 Sunday Papers 🎨</h1></a>
+        <nav class='site-navigation'>
+          <ul>
+            <li><a href="/">Latest</a></li>
+            <li><a href="/archive">Archive</a></li>
+          </ul>
         </nav>
+      </header>
 
-        <% if content_for(@item, :newspost) %>
-          <article>
-            <%= content_for(@item, :newspost) %>
-          </article>
+      <main>
+        <% if item[:non_comic_page] %>
+          <%= yield %>
+        <% else %>
+          <figure>
+            <%= content_for(@item, :comic) %>
+            <%= yield %>
+          </figure>
+
+
+          <nav class='comic-navigation'>
+            <ol>
+              <li>
+                <a <% if @config[:first_comic] %> href="<%= @config[:first_comic].identifier.without_ext %>" <% end %>>
+                  First
+                </a>
+              </li>
+              <li>
+                <a <% if @item[:previous_comic] %> href="<%= @item[:previous_comic].identifier.without_ext %>" <% end %>>
+                  Previous
+                </a>
+              </li>
+              <li>
+                <a <% if @item[:next_comic] %> href="<%= @item[:next_comic].identifier.without_ext %>" <% end %>>
+                  Next
+                </a>
+              </li>
+              <li>
+                <a <% if @config[:last_comic] %> href="<%= @config[:last_comic].identifier.without_ext %>" <% end %>>
+                  Last
+                </a>
+              </li>
+            </ol>
+          </nav>
+
+          <% if content_for(@item, :newspost) %>
+            <article>
+              <%= content_for(@item, :newspost) %>
+            </article>
+          <% end %>
         <% end %>
-      <% end %>
-    </main>
-    <footer>
-      <!-- For your convenience! -->
-      &copy; <%= Date.today.year %>
-      Add your trademark & other info here!
-    </footer>
+      </main>
+      <footer>
+        <!-- For your convenience! -->
+        &copy; <%= Date.today.year %>
+        Add your trademark & other info here!
+      </footer>
+    </section>
   </body>
 </html>

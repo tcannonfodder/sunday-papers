@@ -1,7 +1,185 @@
 /* This is where you can style your site! */
 
+/* Page structure */
+
+html{
+  height: 100%;
+  background: green;
+}
+
+body{
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.site-navigation ul,
+.comic-navigation ol{
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
 .site-navigation li,
 .comic-navigation li{
   list-style: none;
   display: inline-block;
+}
+
+.site-navigation li a,
+.comic-navigation li a{
+  display: block;
+}
+
+body > section{
+  display: grid;
+  grid-template-rows: max-content auto max-content;
+  min-height: 100vh;
+
+  max-width: 80vw;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main figure{
+  margin: 0;
+  margin-left: .3em;
+  margin-right: .3em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+main figure img{
+  max-width: 100%;
+}
+
+main article{
+  padding-left: .3em;
+  padding-right: .3em;
+  margin-bottom: .8em;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main article h2,
+main article .publish-date{
+  text-align: center;
+}
+
+main article h2{
+  margin-bottom: 0;
+}
+
+main article .publish-date{
+  margin-bottom: .5em;
+}
+
+/*
+  Flourishes (I've been using https://colorhunt.co/palette/140057 )
+  #eeeeee
+  #acc6aa
+  #71a0a5
+  #77628c
+*/
+
+
+body {
+  background: #eeeeee;
+}
+
+section{
+  /*background: #acc6aa;*/
+  /*border: 1px solid rgba(113, 160, 165, 1.000);
+  border-radius: .8em;*/
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+header, footer{
+  background: rgba(113, 160, 165, 0.3000);
+  text-align: center;
+  padding: .8em;
+}
+
+header{
+  margin-top: 1vh;
+  border: 1px solid rgba(113, 160, 165, 1.000);
+  border-top-left-radius: .8em;
+  border-top-right-radius: .8em;
+}
+
+footer{
+  margin-bottom: 1vh;
+  border: 1px solid rgba(113, 160, 165, 1.000);
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+}
+
+main{
+  border: 1px solid rgba(113, 160, 165, 1.000);
+  border-top-width: 0;
+  border-bottom-width: 0;
+}
+
+header a{
+  text-decoration: none;
+  color: black;
+}
+
+header h1{
+  margin: 0;
+  font-family: "Baskerville Semibold", serif;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.comic-navigation{
+  text-align: center;
+}
+
+.site-navigation li,
+.comic-navigation li{
+  font-family: "Futura", sans-serif;
+  background: rgba(119, 98, 140, 1.000);
+  color: white;
+  border-radius: .5em;
+  margin-right: 5px;
+  min-width: 20vw;
+}
+
+.site-navigation li:first-child,
+.comic-navigation li:first-child{
+  margin-left: 5px;
+}
+
+.site-navigation li a,
+.comic-navigation li a{
+  color: white;
+  text-decoration: none;
+  padding: .5em;
+}
+
+.site-navigation li:hover,
+.comic-navigation li:hover{
+  background: hsla(270, 18%, 60%, 1.000);
+}
+
+main article{
+  font-family: "Baskerville", serif;
+  font-size: 1.3em;
+}
+
+main article h2{
+  font-size: 2em;
+}
+
+.publish-date{
+  font-style: italic;
+  font-size: .9em;
+}
+
+footer{
+  font-size: .8em;
 }

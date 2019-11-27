@@ -186,6 +186,14 @@ main article{
   font-size: 1.3em;
 }
 
+main article a{
+  color: #71a0a5;
+}
+
+main article a:visited{
+  color: rgba(119, 98, 140, 1.000);
+}
+
 main article h2{
   font-size: 2em;
 }

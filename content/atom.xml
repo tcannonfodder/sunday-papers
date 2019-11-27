@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <%# UPDATE THE TITLE & AUTHOR #>
+  <title>📰 Sunday Papers 🎨</title>
+  <subtitle>A Nanoc Skeleton for Webcomics</subtitle>
+  <author>
+    <name>John Doe</name>
+    <uri><%= @config[:base_url] + '/' %></uri>
+  </author>
+  <icon>/icon.jpg</icon>
+  <logo>/logo.jpg</logo>
+  <rights>
+    <!-- For your convenience! -->
+    &copy; <%= Date.today.year %>
+    Add your trademark & other info here!
+  </rights>
+
+  <% # END UPDATE BLOCK %>
+
+  <category term="comics" label="comics"/>
+  <category term="webcomics" label="webcomics"/>
+  <generator version="<%= Nanoc::VERSION %>">
+    Sunday Papers (Nanoc <%= Nanoc::VERSION %>)
+  </generator>
+
+  <link href="<%= feed_url %>" rel="self" />
+  <link href="<%= @config[:base_url] + '/' %>" rel="alternate" />
+  <id><%= @config[:base_url] + '/' %></id>
+  <updated><%= attribute_to_time(sorted_articles.first[:updated_at] || sorted_articles.first[:created_at]).__nanoc_to_iso8601_time %></updated>
+
+  <% sorted_articles.each do |item| %>
+  <entry>
+    <title><%= item[:title] %></title>
+    <link href="<%= url_for(item) %>" />
+    <id><%= atom_tag_for(item) %></id>
+    <published><%= attribute_to_time(item[:updated_at] || item[:created_at]).__nanoc_to_iso8601_time %></published>
+    <updated><%= attribute_to_time(item[:updated_at] || item[:created_at]).__nanoc_to_iso8601_time %></updated>
+    <summary>A new page has been published: "<%= item[:title]%>"</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <div class='comic'>
+          <% if content_for(item, :comic) %>
+            <%= content_for(item, :comic) %>
+          <% end %>
+          <%= item.compiled_content(snapshot: :pre) %>
+        </div>
+
+        <% if content_for(item, :newspost) %>
+          <div class='newspost'>
+            <%= content_for(item, :newspost) %>
+          </div>
+        <% end %>
+      </div>
+    </content>
+  </entry>
+  <% end %>
+
+</feed>

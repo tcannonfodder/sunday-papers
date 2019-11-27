@@ -30,6 +30,11 @@ compile '/**/*.html' do
   end
 end
 
+compile '/atom.xml' do
+  filter :erb
+  write item.identifier.to_s
+end
+
 compile '/**/*' do
   write item.identifier.to_s
 end

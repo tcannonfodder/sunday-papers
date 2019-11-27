@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <%# UPDATE THE TITLE & AUTHOR #>
+  <!-- LABEL YOUR FEED HERE -->
   <title>📰 Sunday Papers 🎨</title>
   <subtitle>A Nanoc Skeleton for Webcomics</subtitle>
   <author>
@@ -14,8 +14,7 @@
     &copy; <%= Date.today.year %>
     Add your trademark & other info here!
   </rights>
-
-  <% # END UPDATE BLOCK %>
+  <!-- END UPDATE BLOCK -->
 
   <category term="comics" label="comics"/>
   <category term="webcomics" label="webcomics"/>

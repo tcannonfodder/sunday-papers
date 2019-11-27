@@ -4,7 +4,6 @@
 
 html{
   height: 100%;
-  background: green;
 }
 
 body{
@@ -84,8 +83,7 @@ main article .publish-date{
   #77628c
 */
 
-
-body {
+html {
   background: #eeeeee;
 }
 

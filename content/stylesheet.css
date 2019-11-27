@@ -35,8 +35,7 @@ body > section{
   grid-template-rows: max-content auto max-content;
   min-height: 100vh;
 
-  max-width: 80vw;
-  max-width: fit-content;
+  max-width: 98vw;
   margin-left: auto;
   margin-right: auto;
 }

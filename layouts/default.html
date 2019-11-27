@@ -24,8 +24,10 @@
     <meta property="article:tag" content="webcomics" />
 
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="<%= item.identifier.without_ext %>" />
-    <meta property="og:image" content="<%= @config[:base_url] + '/' + item[:preview_image] %>" />
+    <meta property="og:url" content="<%= url_for(item) %>" />
+    <% if item[:preview_image] %>
+      <meta property="og:image" content="<%= @config[:base_url] + '/' + item[:preview_image] %>" />
+    <% end %>
 
     <meta property="article:published_time" content="<%= item[:created_at] %>" />
   </head>

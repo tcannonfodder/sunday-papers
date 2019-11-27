@@ -7,8 +7,8 @@
     <name>John Doe</name>
     <uri><%= @config[:base_url] + '/' %></uri>
   </author>
-  <icon>/icon.jpg</icon>
-  <logo>/logo.jpg</logo>
+  <icon>/favicon/favicon-32x32.jpg</icon>
+  <logo>/favicon/favicon-32x32.jpg</logo>
   <rights>
     <!-- For your convenience! -->
     &copy; <%= Date.today.year %>

@@ -192,3 +192,18 @@ main article h2{
 footer{
   font-size: .8em;
 }
+
+
+/* Styling for the link to the repo */
+
+.repo-link{
+  background: hsla(336, 94%, 60%, 1.000) !important;
+  box-shadow: inset 0 0 0px 3px hsla(336, 94%, 60%, 1.000) !important;
+  color: white !important;
+}
+
+.repo-link:hover,
+.repo-link:focus{
+  background: white !important;
+  color: hsla(336, 94%, 60%, 1.000) !important;
+}

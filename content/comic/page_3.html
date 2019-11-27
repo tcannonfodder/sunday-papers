@@ -1,11 +1,19 @@
 ---
-title: Page 3
+title: Headroom Comix
 kind: article
-created_at: 2019-06-04T20:30:00Z
-updated_at: 2019-06-10
+created_at: 2019-11-26
+updated_at: 2019-11-26T19:11:00Z
 ---
 
 
 <% content_for(:comic) do %>
-  <img src="/pages/page-3.png">
+  <img src="/pages/headroom-comixs.jpg">
+<% end %>
+
+
+<% content_for(:newspost) do %>
+  <h2>Headroom Comix, by <a href="https://thekyletm.tumblr.com">Kyle TM</a></h2>
+  <aside class='publish-date'><%= publish_time_tag %> (originally published on <%= publish_time_tag(Date.new(2014, 10, 23)) %>)</aside>
+  <p>This comic was graciously donated by <a href="https://thekyletm.tumblr.com">Kyle TM</a>, to help illustrate how you can use this skeleton for your own comics</p>
+  <p><a href="https://headroomcomix.tumblr.com/post/100771518060">You can read the original comic here</a>.</p>
 <% end %>

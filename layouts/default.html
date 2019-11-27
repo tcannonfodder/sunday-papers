@@ -35,7 +35,7 @@
           <nav class='comic-navigation'>
             <ol>
               <li>
-                <a <% if @config[:first_comic] %> href="<%= @config[:first_comic].identifier.without_ext %>" <% end %>>
+                <a <% if @config[:first_comic] && @config[:first_comic] != item %> href="<%= @config[:first_comic].identifier.without_ext %>" <% end %>>
                   First
                 </a>
               </li>
@@ -50,7 +50,7 @@
                 </a>
               </li>
               <li>
-                <a <% if @config[:last_comic] %> href="<%= @config[:last_comic].identifier.without_ext %>" <% end %>>
+                <a <% if @config[:last_comic] && @config[:last_comic] != item %> href="<%= @config[:last_comic].identifier.without_ext %>" <% end %>>
                   Last
                 </a>
               </li>

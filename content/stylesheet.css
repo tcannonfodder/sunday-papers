@@ -137,14 +137,14 @@ header h1{
   text-align: center;
 }
 
-.site-navigation li,
-.comic-navigation li{
+.site-navigation li a,
+.comic-navigation li a {
   font-family: "Futura", sans-serif;
   background: rgba(119, 98, 140, 1.000);
   color: white;
   border-radius: .5em;
   margin-right: 5px;
-  min-width: 20vw;
+  min-width: 3em;
 }
 
 .site-navigation li:first-child,
@@ -159,10 +159,17 @@ header h1{
   padding: .5em;
 }
 
-.site-navigation li:hover,
-.comic-navigation li:hover{
+.site-navigation li a[href]:hover,
+.comic-navigation li a[href]:hover{
   background: hsla(270, 18%, 60%, 1.000);
 }
+
+.comic-navigation a:not([href]) {
+  filter: grayscale(1);
+  opacity: 0.3;
+  cursor: default;
+}
+
 
 main article{
   font-family: "Baskerville", serif;

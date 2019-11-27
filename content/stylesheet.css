@@ -132,6 +132,11 @@ header h1{
   font-weight: bold;
 }
 
+header h1 i.fas,
+header h1 i.far{
+  color: rgba(119, 98, 140, 1.000);
+}
+
 .comic-navigation{
   text-align: center;
 }

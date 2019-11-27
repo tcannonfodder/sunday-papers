@@ -6,19 +6,22 @@
     <title>Sunday Papers - <%= @item[:title] %></title>
     <link rel="stylesheet" href="/stylesheet.css">
 
+    <!-- Loaded for icons, feel free to remove it! -->
+    <script src="https://kit.fontawesome.com/3270dded95.js" crossorigin="anonymous"></script>
+
     <!-- you don't need to keep this, but it's cool for stats! -->
     <meta name="generator" content="Sunday Papers (Nanoc <%= Nanoc::VERSION %>)">
   </head>
   <body>
     <section>
       <header>
-        <a href="/"><h1>📰 Sunday Papers 🎨</h1></a>
+        <a href="/"><h1><i class="fas fa-pen-nib fa-xs"></i> Sunday Papers <i class="fas fa-newspaper fa-xs"></i></h1></a>
         <nav class='site-navigation'>
           <ul>
-            <li><a href="/">Latest</a></li>
-            <li><a href="/archive">Archive</a></li>
-            <li><a href="/atom.xml">📡 Feed</a></li>
-            <li><a class='repo-link' href="https://github.com/tcannonfodder/sunday-papers">✨Make your own!✨</a></li>
+            <li><a href="/"><i class="fas fa-home"></i> Latest</a></li>
+            <li><a href="/archive"><i class="fas fa-book"></i> Archive</a></li>
+            <li><a href="feed:<%= @config[:base_url] %>/atom.xml"><i class="fas fa-rss"></i> Feed</a></li>
+            <li><a class='repo-link' href="https://github.com/tcannonfodder/sunday-papers"><i class="fab fa-github"></i> Make your own!</a></li>
           </ul>
         </nav>
       </header>
@@ -37,22 +40,22 @@
             <ol>
               <li>
                 <a <% if @config[:first_comic] && @config[:first_comic] != item %> href="<%= @config[:first_comic].identifier.without_ext %>" <% end %>>
-                  First
+                  <i class="fas fa-fast-backward"></i> First
                 </a>
               </li>
               <li>
                 <a <% if @item[:previous_comic] %> href="<%= @item[:previous_comic].identifier.without_ext %>" <% end %>>
-                  Previous
+                  <i class="fas fa-step-backward"></i></i> Previous
                 </a>
               </li>
               <li>
                 <a <% if @item[:next_comic] %> href="<%= @item[:next_comic].identifier.without_ext %>" <% end %>>
-                  Next
+                  <i class="fas fa-step-forward"></i> Next
                 </a>
               </li>
               <li>
                 <a <% if @config[:last_comic] && @config[:last_comic] != item %> href="<%= @config[:last_comic].identifier.without_ext %>" <% end %>>
-                  Last
+                  <i class="fas fa-fast-forward"></i> Last
                 </a>
               </li>
             </ol>

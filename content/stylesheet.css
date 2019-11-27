@@ -118,6 +118,7 @@ main{
   border: 1px solid rgba(113, 160, 165, 1.000);
   border-top-width: 0;
   border-bottom-width: 0;
+  background: hsla(109, 0%, 96%, 1.000)
 }
 
 header a{

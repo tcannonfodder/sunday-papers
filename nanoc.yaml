@@ -9,3 +9,6 @@ prune:
 data_sources:
   - type: filesystem
     encoding: utf-8
+
+
+base_url: https://thomascannon.me/sunday-papers

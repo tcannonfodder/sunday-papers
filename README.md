@@ -6,6 +6,8 @@ I'm making Sunday Papers in the hopes that it'll help webcomic artists quickly s
 
 _This is a **very** early version. I'm hoping to polish it more in the future. If you have any questions, please feel free to [submit an issue](https://github.com/tcannonfodder/sunday-papers/issues) or reach out some other way, and I'll try to help!_
 
+You see a demo of the skeleton in action here: https://sunday-papers.netlify.com
+
 ## How it works
 
 Sunday Papers uses [nanoc](https://nanoc.ws) which is a static site generator that uses the [Ruby programming language](https://www.ruby-lang.org/en/)

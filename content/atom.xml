@@ -4,7 +4,7 @@
   <title>📰 Sunday Papers 🎨</title>
   <subtitle>A Nanoc Skeleton for Webcomics</subtitle>
   <author>
-    <name>John Doe</name>
+    <name>Charlie Doe</name>
     <uri><%= @config[:base_url] + '/' %></uri>
   </author>
   <icon>/favicon/favicon-32x32.jpg</icon>

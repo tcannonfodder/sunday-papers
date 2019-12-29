@@ -5,7 +5,6 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     adsf (1.4.2)
       rack (>= 1.0.0, < 3.0.0)
-    byebug (11.0.1)
     colored (1.2)
     concurrent-ruby (1.1.5)
     cri (2.15.9)
@@ -47,7 +46,7 @@ GEM
       equatable (~> 0.6)
       tty-color (~> 0.5)
     public_suffix (4.0.1)
-    rack (2.0.7)
+    rack (2.0.8)
     ref (2.0.0)
     slow_enumerator_tools (1.1.0)
     tomlrb (1.2.9)
@@ -63,7 +62,6 @@ PLATFORMS
 
 DEPENDENCIES
   adsf
-  byebug
   nanoc
 
 BUNDLED WITH
